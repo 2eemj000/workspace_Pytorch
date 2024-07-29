@@ -1,0 +1,46 @@
+1. 컴퓨터 정리
+- 파이썬 다 지우고 오래된 아나콘다 삭제
+- 1) 윈도우 X -> 앱 및 기능 -> python 찾아서 다지워
+- 2) 삭제 후에 윈도우 X -> window powershell or CMD 창에 python 입력하면 실행이 안되거나 MSstore가 실행되어야 함
+- 3) C:\Users\user에도 기존에 설치된 .conda, .ipython, .matplotlib 등 기존 파이썬 관련 다 삭제 
+- 4) 윈도우 X -> 시스템 -> 고급시스템설정 -> 환경변수 -> user, 시스템에 path -> python 관련 경로 삭제
+
+2. 환경구축
+- 운영체제 + GPU 설정 -> 코랩
+- scikit-learn (ML) = 알고리즘 묶음
+- pytorch (DL) - 알고리즘 내에서 특징추출 = 계층생성기
+
+3. 아나콘다 설치
+- 선택 4개 있는거 젤 밑에도 체크 (총3개)
+- cache 삭제 부분만 설정 후 설치
+
+4. 아나콘다 사용법 -> 반드시 conda prompt를 사용 '(base) C:\Users\user'
+- conda env list
+- conda create -n torch-book python=3.12
+(torch-book : 프로젝트명, python 버전 (pytorch사이트 들어가서 버전맞춰진거 확인해서 결정) 반드시 명시)
+- conda env list
+- conda activate torch-book (base를 torch-book으로 변경 - base폴더에서 작업 X, 무조건 가상환경에서 작업) 
+- conda deactivate (다시 base로 돌아올 때)
+- conda remove -n torch-book (가상환경 삭제하고 싶을 때)
+
+5. 필요라이브러리 설치
+a)
+https://pytorch.org/ 에서
+stable - windows - conda - python - cpu 선택
+밑에 코드 복사해서 torch-book에서 붙여넣기
+b)
+conda install -c conda-forge jupyterlab 설치
+
+6. C드라이브 바로밑에 폴더 만들고 경로변경 (cd C:\practice-torch)
+
+7. jupyter-lab 명령어로 실행시킴
+
+8. 그 ipynb 페이지에서 !conda install anaconda::pandas 로 설치 
+!conda install anaconda::pandas -y (설치할까요? -> y)라고 자동으로 설치가 되도록 설정해줘야함
+!conda install anaconda::seaborn -y (seaborn 설치하면 matplotlib도 같이 설치됨)
+* 공부내용
+머신러닝 : 알고리즘 사용법
+딥러닝 : 
+데이터처리 / 계층구성 / 검증
+오차함수 (지도학습) -> 최적화
+
