@@ -33,11 +33,12 @@ conda install -c conda-forge jupyterlab 설치
 
 6. C드라이브 바로밑에 폴더 만들고 경로변경 (cd C:\practice-torch)
 
-7. jupyter-lab 명령어로 실행시킴
+7. "jupyter-lab" 명령어로 실행시킴
 
 8. 그 ipynb 페이지에서 !conda install anaconda::pandas 로 설치 
 !conda install anaconda::pandas -y (설치할까요? -> y)라고 자동으로 설치가 되도록 설정해줘야함
 !conda install anaconda::seaborn -y (seaborn 설치하면 matplotlib도 같이 설치됨)
+
 * 공부내용
 머신러닝 : 알고리즘 사용법
 딥러닝 : 
